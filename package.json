@@ -1,5 +1,5 @@
 {
-  "name": "soauth",
+  "name": "@sojs_coder/soauth",
   "version": "1.0.0",
   "description": "Express middleware for SoAuth",
   "main": "index.js",
@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/sojs-coder/SoAuth-Node/issues"
   },
-  "homepage": "https://github.com/sojs-coder/SoAuth-Node#readme"
+  "homepage": "https://github.com/sojs-coder/SoAuth-Node#readme",
+  "devDependencies": {}
 }

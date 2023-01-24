@@ -29,4 +29,6 @@ function soauth(req,res,next){
     }
   }
 }
-module.exports = soauth;
+module.exports = {
+  soauth
+}
