@@ -11,7 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.3.0"
   },
-  "devDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sojs-coder/SoAuth-Node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sojs-coder/SoAuth-Node/issues"
+  },
+  "homepage": "https://github.com/sojs-coder/SoAuth-Node#readme"
 }
