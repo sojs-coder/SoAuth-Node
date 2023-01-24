@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
-async function postData(url = '', data = {}) {
-
+async function postData(data = {}) {
+  const url = "https//soauth.sojs.repl.co/checkValid"
   const response = await fetch(url, {
     method: 'POST',
     mode: "cors",
