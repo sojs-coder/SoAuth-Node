@@ -28,6 +28,8 @@ function soauth(req,res,next){
           next(d)
         }
       })
+    }else{
+      next(false);
     }
   }
 }
