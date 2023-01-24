@@ -1,16 +1,18 @@
 const fetch = require("node-fetch");
 
-async function postData(data = {}) {
-  const url = "https://soauth.sojs.repl.co/checkValid";
+async function postData(url = '', data = {}) {
+
   const response = await fetch(url, {
     method: 'POST',
+    mode: "cors",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
     },
-    referrerPolicy: 'no-referrer',
     body: JSON.stringify(data)
   });
-  return response.json();
+  
+  return response.json()
 }
 function soauth(req,res,next){
   if(!req.so_auth){
