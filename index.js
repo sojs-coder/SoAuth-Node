@@ -29,11 +29,11 @@ function soauth(req,res,next){
       postData({"token":req.cookies["so-auth"]}).then(d=>{
         if(d.message){ console.log(d.message); req.session.so_auth.user = false; next()}else{
           req.session.so_auth.user = d;
-          next(d)
+          next()
         }
       })
     }else{
-      next(false);
+      next();
     }
   }
 }
