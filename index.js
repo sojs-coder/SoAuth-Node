@@ -15,16 +15,20 @@ async function postData(data = {}) {
   return response.json()
 }
 function soauth(req,res,next){
-  if(!req.so_auth){
-    req.so_auth = {}
+  if(!req.session){
+    console.log("Please install a session manager");
   }
+  if(!req.session.so_auth){
+    req.session.so_auth = {}
+  }
+  
   if(!req.cookies){
     console.log("Please install a cookie parser middleware")
   }else{
     if(req.cookies["so-auth"]){
       postData({"token":req.cookies["so-auth"]}).then(d=>{
-        if(d.message){ console.log(d.message); req.so_auth.user = false; next()}else{
-          req.so_auth.user = d;
+        if(d.message){ console.log(d.message); req.session.so_auth.user = false; next()}else{
+          req.session.so_auth.user = d;
           next(d)
         }
       })
