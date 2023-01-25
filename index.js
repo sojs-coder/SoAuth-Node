@@ -28,7 +28,7 @@ function soauth(req,res,next){
     if(req.cookies["so-auth"]){
       postData({"token":req.cookies["so-auth"]}).then(d=>{
         if(d.message){ console.log(d.message); req.session.so_auth.user = false; next()}else{
-          req.session.so_auth.user = d;
+          req.session.so_auth.user = d.data;
           next()
         }
       })
